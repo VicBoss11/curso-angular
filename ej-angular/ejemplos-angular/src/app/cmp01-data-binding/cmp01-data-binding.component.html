@@ -19,5 +19,5 @@
 
 <h3>Two-Way Data Binding</h3>
 <input type="text" [(ngModel)]="nombre">
-<input type="text" [value]="nombre" (keyup)="actualizarNombre($event)">
+<input type="text" [value]="nombre" (input)="actualizarNombre($event)">
 
