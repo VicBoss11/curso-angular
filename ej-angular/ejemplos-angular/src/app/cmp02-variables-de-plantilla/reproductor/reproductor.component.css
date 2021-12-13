@@ -1,0 +1,14 @@
+.c-reproductor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.c-reproductor video {
+  margin: 16px 0;
+}
+
+.c-reproductorVolumeController {
+  transform: rotate(-90deg);
+}

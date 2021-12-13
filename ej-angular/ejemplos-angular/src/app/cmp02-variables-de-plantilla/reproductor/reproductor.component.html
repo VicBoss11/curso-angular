@@ -1,0 +1,14 @@
+<div class="c-reproductor">
+  <video #video controls src="assets/video.mp4" width="400"></video>
+
+  <div class="c-reproductorControls">
+    <input class="c-reproductorVolumeController" (input)="changeVolume($event)" max="100" min="0" type="range">
+
+    <button (click)="goBack()" type="button">Go back 15 sec</button>
+    <button (click)="play()" type="button">Play</button>
+    <button (click)="pause()" type="button">Pause</button>
+    <button (click)="goForward()" type="button">Go forward 10 sec</button>
+    <button (click)="fullScreen()" type="button">Full screen</button>
+    <button (click)="replay()" type="button">Replay</button>
+  </div>
+</div>
