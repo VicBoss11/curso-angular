@@ -27,8 +27,6 @@ export class Cmp01DataBindingComponent implements OnInit {
   }
 
   cambiarNombre(nuevoNombre: string, event: Event): void {
-    console.log(event);
-
     this.nombre = nuevoNombre;
   }
 
