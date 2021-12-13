@@ -407,7 +407,6 @@ flycheck_*.el
 *.psm
 *.cmp
 *.jpg
-*.html
 *.bsf
 
 # ignore simulation output of ModelSim
