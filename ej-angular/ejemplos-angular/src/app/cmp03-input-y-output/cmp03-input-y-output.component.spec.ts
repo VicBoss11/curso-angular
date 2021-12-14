@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Cmp03InputYOutputComponent } from 'src/app/cmp03-imput-y-output/cmp03-input-y-output.component';
+import { Cmp03InputYOutputComponent } from 'src/app/cmp03-input-y-output/cmp03-input-y-output.component';
 
 describe('Cmp03ImputYOutputComponent', () => {
   let component: Cmp03InputYOutputComponent;
