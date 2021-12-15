@@ -21,6 +21,14 @@ export class Cmp05PipesComponent implements OnInit {
 
   filtroTxt: string = '';
 
+  datosPost1 = fetch('https://jsonplaceholder.typicode.com/posts/1').then(
+    response => {
+      console.log(response);
+
+      return response.json();
+    }
+  );
+
   constructor() { }
 
   ngOnInit(): void {
