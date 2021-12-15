@@ -1,0 +1,38 @@
+<h2>Pipes</h2>
+
+<div>
+  <h3>{{ producto.titulo }}</h3>
+  <p>{{ producto.descripcion }}...</p>
+  <div>
+    <span>{{ producto.precio | doble:1000 }}</span>
+    <span>{{ producto.fechaLanzamiento }}</span>
+  </div>
+</div>
+
+<div>
+  <h3>{{ producto.titulo | titlecase }}</h3>
+  <p>{{ producto.descripcion | slice:0:150 }}...</p>
+  <div>
+    <span>{{ producto.precio | currency:'EUR' }}</span>
+    <span>{{ producto.fechaLanzamiento | date:'dd/mm/yyyy' }}</span>
+  </div>
+</div>
+
+<input type="text" (change)="addTarea($event)">
+
+<ul>
+  <li *ngFor="let tarea of tareas">
+    {{ tarea }}
+  </li>
+</ul>
+
+<input type="text" [(ngModel)]="filtroTxt">
+
+<ul>
+  <li *ngFor="let tarea of tareas | filtro:filtroTxt">
+    {{ tarea }}
+  </li>
+</ul>
+
+<p>{{ 'hola mundo' | reverse }}</p>
+<p>{{ 'no se si me va a tocar la loteria' | ocultarPalabras:['no', 'si', 'e'] }}</p>
