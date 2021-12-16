@@ -4,4 +4,12 @@
 <!--<app-cmp03-input-y-output></app-cmp03-input-y-output>-->
 <!--<app-cmp04-directivas></app-cmp04-directivas>-->
 <!--<app-cmp05-pipes></app-cmp05-pipes>-->
-<app-cmp06-formularios></app-cmp06-formularios>
+<!--<app-cmp06-formularios></app-cmp06-formularios>-->
+<!--<app-cmp07-servicios></app-cmp07-servicios>-->
+<app-cmp08-observables></app-cmp08-observables>
+
+<button (click)="logout()" *ngIf="isLoggedIn; else loginButton" type="button">Logout</button>
+
+<ng-template #loginButton>
+  <button (click)="login()" type="button">Login</button>
+</ng-template>
