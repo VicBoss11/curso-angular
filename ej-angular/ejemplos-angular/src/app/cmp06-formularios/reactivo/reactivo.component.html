@@ -1,6 +1,6 @@
 <h3>Reactivo</h3>
 
-<form [formGroup]="form" (ngSubmit)="registro()">
+<form (ngSubmit)="registro()" [formGroup]="form">
   <div>
     <label for="username">Username:</label>
     <input formControlName="username" id="username" type="text">
@@ -22,5 +22,12 @@
     <app-error *ngIf="showErrors(passwordInput)" [errores]="passwordInput.errors"></app-error>
   </div>
 
-  <button type="submit" [disabled]="form.invalid">Regístrate</button>
+  <div>
+    <label for="confirmarPassword">Confirmar password:</label>
+    <input formControlName="confirmarPassword" id="confirmarPassword" type="password">
+
+    <app-error *ngIf="showErrors(confirmarPasswordInput)" [errores]="confirmarPasswordInput.errors"></app-error>
+  </div>
+
+  <button [disabled]="form.invalid" type="submit">Regístrate</button>
 </form>

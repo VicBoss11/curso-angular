@@ -27,8 +27,12 @@ export class ReactivoComponent implements OnInit {
           Validators.minLength(8),
           CustomValidators.esPasswordSegura({mayus: true, simbolos: true})
         ]
-      )
-    }, /*{ updateOn: 'blur' }*/);
+      ),
+      confirmarPassword: formBuilder.control('', CustomValidators.esPasswordRepetidaValida)
+    }, {
+      /*updateOn: 'blur',*/
+      // validators: [CustomValidators.esPasswordRepetidaValida]
+    });
 
     // this.form = new FormGroup({
     //   username: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -52,6 +56,10 @@ export class ReactivoComponent implements OnInit {
     return this.form.controls['password'];
   }
 
+  get confirmarPasswordInput(): AbstractControl {
+    return this.form.controls['confirmarPassword'];
+  }
+
   ngOnInit(): void {
   }
 
@@ -62,4 +70,8 @@ export class ReactivoComponent implements OnInit {
   showErrors(field: AbstractControl): boolean {
     return field.invalid && field.dirty;
   }
+
+  // checkPasswordConfirmation(): boolean {
+  //   return this.form.controls['confirmarPassword'].dirty && this.form?.errors?.['confirmarPassword'];
+  // }
 }

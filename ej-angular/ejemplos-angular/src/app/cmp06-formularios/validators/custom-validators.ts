@@ -1,4 +1,9 @@
-import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+import {
+  AbstractControl,
+  FormGroup,
+  ValidationErrors,
+  ValidatorFn
+} from '@angular/forms';
 
 function esStark(control: AbstractControl): ValidationErrors | null {
   const nombres = ['robb', 'arya', 'tony', 'sansa', 'rickon', 'bran', 'nedd'];
@@ -46,7 +51,21 @@ function esPasswordSegura(opciones: IOpcionesPassword): ValidatorFn {
   }
 }
 
+function esPasswordRepetidaValida(control: AbstractControl): ValidationErrors | null {
+  const password = control.parent?.value.password;
+  const confirmarPassword = control.value;
+
+  if (password === confirmarPassword) {
+    return null
+  }
+
+  return {
+    confirmarPassword: true
+  }
+}
+
 export const CustomValidators = {
-  esStark: esStark,
-  esPasswordSegura
+  esStark,
+  esPasswordSegura,
+  esPasswordRepetidaValida
 };

@@ -55,6 +55,8 @@ export class ErrorComponent implements OnInit, OnChanges {
             'La contraseña tiene que tener al menos una letra mayúscula'
           );
         }
+      } else if (key === 'confirmarPassword') {
+        this.mensajesError.push('Las contraseñas no coinciden');
       }
     }
   }
