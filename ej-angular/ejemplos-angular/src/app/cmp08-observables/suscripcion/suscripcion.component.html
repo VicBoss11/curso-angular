@@ -1,4 +1,4 @@
-<div>
+<div class="card text-white bg-dark" style="width: 500px; margin: 0 auto; padding: 10px;">
   <h4>Suscripción a {{ plataforma }}</h4>
   <p>Precio: {{ precio | currency: 'EUR' }}</p>
   <p>Estado: {{ estadoSub ? 'activa' : 'no activa' }}</p>
@@ -6,12 +6,29 @@
   <ng-container *ngIf="!estadoSub; else suscripcionActiva">
     <p>Fecha próxima renovación: --:--:--</p>
 
-    <button type="button"  (click)="activarSuscripcion()">Activar suscripción</button>
+    <button (click)="activarSuscripcion()" class="btn btn-success" type="button">
+      Activar suscripción
+    </button>
   </ng-container>
 
   <ng-template #suscripcionActiva>
     <p>Fecha próxima renovación: {{ fechaProximoPago | date:'HH:mm:ss'}}</p>
 
-    <button type="button" (click)="cancelarSuscripcion()">Cancelar suscripción</button>
+    <button (click)="cancelarSuscripcion()" class="btn btn-danger" type="button">
+      Cancelar suscripción
+    </button>
   </ng-template>
+</div>
+
+<div
+  *ngIf="alert.mostrar" [ngClass]="{
+    'alert-danger': alert.danger,
+    'alert-success': alert.success,
+    'alert-info': alert.info}
+  "
+  class="alert"
+  role="alert"
+  style="position: absolute; top: 10px; right: 10px;"
+>
+  {{ alert.mensaje }}
 </div>
