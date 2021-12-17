@@ -1,12 +1,21 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { Cmp03InputYOutputComponent } from 'src/app/cmp03-input-y-output/cmp03-input-y-output.component';
+import {
+  Cmp03InputYOutputComponent
+} from 'src/app/cmp03-input-y-output/cmp03-input-y-output.component';
 import { MarcarDirective } from 'src/app/cmp04-directivas/marcar/marcar.directive';
 import { AppComponent } from './app.component';
-import { Cmp01DataBindingComponent } from './cmp01-data-binding/cmp01-data-binding.component';
-import { Cmp02VariablesDePlantillaComponent } from './cmp02-variables-de-plantilla/cmp02-variables-de-plantilla.component';
-import { ReproductorComponent } from './cmp02-variables-de-plantilla/reproductor/reproductor.component';
+import {
+  Cmp01DataBindingComponent
+} from './cmp01-data-binding/cmp01-data-binding.component';
+import {
+  Cmp02VariablesDePlantillaComponent
+} from './cmp02-variables-de-plantilla/cmp02-variables-de-plantilla.component';
+import {
+  ReproductorComponent
+} from './cmp02-variables-de-plantilla/reproductor/reproductor.component';
 import { LeiaComponent } from './cmp03-input-y-output/leia/leia.component';
 import { LukeComponent } from './cmp03-input-y-output/luke/luke.component';
 import { MiBotonComponent } from './cmp03-input-y-output/mi-boton/mi-boton.component';
@@ -16,18 +25,31 @@ import { PowerModeDirective } from './cmp04-directivas/power-mode/power-mode.dir
 import { Cmp05PipesComponent } from './cmp05-pipes/cmp05-pipes.component';
 import { DoblePipe } from './cmp05-pipes/pipes/doble/doble.pipe';
 import { FiltroPipe } from './cmp05-pipes/pipes/filtro/filtro.pipe';
-import { OcultarPalabrasPipe } from './cmp05-pipes/pipes/ocultar-palabras/ocultar-palabras.pipe';
+import {
+  OcultarPalabrasPipe
+} from './cmp05-pipes/pipes/ocultar-palabras/ocultar-palabras.pipe';
 import { ReversePipe } from './cmp05-pipes/pipes/reverse/reverse.pipe';
-import { Cmp06FormulariosComponent } from './cmp06-formularios/cmp06-formularios.component';
-import { DePlantillaComponent } from './cmp06-formularios/de-plantilla/de-plantilla.component';
+import {
+  Cmp06FormulariosComponent
+} from './cmp06-formularios/cmp06-formularios.component';
+import {
+  DePlantillaComponent
+} from './cmp06-formularios/de-plantilla/de-plantilla.component';
 import { ErrorComponent } from './cmp06-formularios/error/error.component';
 import { ReactivoComponent } from './cmp06-formularios/reactivo/reactivo.component';
 import { CmpAComponent } from './cmp07-servicios/cmp-a/cmp-a.component';
 import { CmpBComponent } from './cmp07-servicios/cmp-b/cmp-b.component';
 import { Cmp07ServiciosComponent } from './cmp07-servicios/cmp07-servicios.component';
-import { Cmp08ObservablesComponent } from './cmp08-observables/cmp08-observables.component';
-import { FechaActualComponent } from './cmp08-observables/fecha-actual/fecha-actual.component';
-import { SuscripcionComponent } from './cmp08-observables/suscripcion/suscripcion.component';
+import {
+  Cmp08ObservablesComponent
+} from './cmp08-observables/cmp08-observables.component';
+import {
+  FechaActualComponent
+} from './cmp08-observables/fecha-actual/fecha-actual.component';
+import {
+  SuscripcionComponent
+} from './cmp08-observables/suscripcion/suscripcion.component';
+import { Cmp09HttpComponent } from './cmp09-http/cmp09-http.component';
 
 @NgModule({
   declarations: [
@@ -58,12 +80,14 @@ import { SuscripcionComponent } from './cmp08-observables/suscripcion/suscripcio
     CmpBComponent,
     Cmp08ObservablesComponent,
     FechaActualComponent,
-    SuscripcionComponent
+    SuscripcionComponent,
+    Cmp09HttpComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
