@@ -1,0 +1,9 @@
+<h2>Peticiones HTTP</h2>
+
+<button (click)="guardar()" type="button">Crear tarea</button>
+
+<ul>
+  <li *ngFor="let tarea of tareas">
+    {{ tarea.titulo }} ({{ tarea.completada ? 'completada' : 'no completada' }})
+  </li>
+</ul>
