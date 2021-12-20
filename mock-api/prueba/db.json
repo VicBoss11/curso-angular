@@ -1,0 +1,30 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "El niño murciélago reaparece en la playa",
+      "content": "Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+      "id": 2,
+      "title": "El caballo blanco de Santiago no era blanco",
+      "content": "Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+      "title": "Aumenta la venta de pitos y flautas",
+      "content": "Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit.",
+      "id": 3,
+      "authorId": 1
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Ángel"
+    },
+    {
+      "id": 1,
+      "name": "Sara"
+    }
+  ]
+}
