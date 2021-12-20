@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,6 +6,8 @@ import {
   Cmp03InputYOutputComponent
 } from 'src/app/cmp03-input-y-output/cmp03-input-y-output.component';
 import { MarcarDirective } from 'src/app/cmp04-directivas/marcar/marcar.directive';
+import { AuthInterceptor } from 'src/app/cmp09-http/interceptors/auth/auth.interceptor';
+import { LogInterceptor } from 'src/app/cmp09-http/interceptors/log/log.interceptor';
 import { AppComponent } from './app.component';
 import {
   Cmp01DataBindingComponent
@@ -50,6 +52,7 @@ import {
   SuscripcionComponent
 } from './cmp08-observables/suscripcion/suscripcion.component';
 import { Cmp09HttpComponent } from './cmp09-http/cmp09-http.component';
+import { Cmp10AutenticacionComponent } from './cmp10-autenticacion/cmp10-autenticacion.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +84,8 @@ import { Cmp09HttpComponent } from './cmp09-http/cmp09-http.component';
     Cmp08ObservablesComponent,
     FechaActualComponent,
     SuscripcionComponent,
-    Cmp09HttpComponent
+    Cmp09HttpComponent,
+    Cmp10AutenticacionComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +93,10 @@ import { Cmp09HttpComponent } from './cmp09-http/cmp09-http.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: LogInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
