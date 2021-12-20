@@ -31,7 +31,25 @@ export class TareasService {
     );
   }
 
-  createTareas(tarea: any): Observable<any> {
+  createTarea(tarea: Tarea): Observable<any> {
     return this.http.post(`${ this.apiUrl }.json`, tarea);
   }
+
+  updateTarea(tarea: Tarea): Observable<any> {
+    const tareaCopy = {...tarea};
+    delete tareaCopy.id;
+
+    return this.http.put(`${ this.apiUrl }/${ tarea.id }.json`, tareaCopy);
+  }
+
+  completeTarea(tarea: Tarea): Observable<any> {
+    return this.http.patch(
+      `${ this.apiUrl }/${ tarea.id }.json`, {completada: !tarea.completada}
+    );
+  }
+
+  deleteTarea(idTarea: string): Observable<null> {
+    return this.http.delete<null>(`${ this.apiUrl }/${ idTarea }.json`);
+  }
+
 }
