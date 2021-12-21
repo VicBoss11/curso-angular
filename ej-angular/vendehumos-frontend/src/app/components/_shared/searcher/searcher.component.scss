@@ -1,0 +1,29 @@
+.c-searcher {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  label {
+    position: relative;
+  }
+
+  i {
+    position: absolute;
+    margin-left: var(--spacing-05);
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    height: var(--layout-03);
+    padding-left: var(--spacing-08);
+    border: none;
+    border-radius: var(--spacing-03);
+    background-color: #f5f8ff;
+
+    &:focus {
+      width: 520px;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.c-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: var(--layout-04) var(--lateral-spacing);
+  row-gap: var(--spacing-06);
+}

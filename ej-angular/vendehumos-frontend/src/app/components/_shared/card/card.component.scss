@@ -1,0 +1,66 @@
+.c-card {
+  display: flex;
+  width: fit-content;
+  height: 80px;
+  cursor: pointer;
+  transition: background-color .3s ease-in;
+  background-image: linear-gradient(12deg, #ffffff 50%, rgba(255, 255, 255, 0));
+
+  &:hover {
+    background-color: #feede6;
+  }
+}
+
+.c-cardImage {
+  width: 80px;
+  height: 80px;
+  margin-right: var(--layout-03);
+  border-radius: var(--spacing-04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: var(--spacing-04);
+  }
+}
+
+.c-cardInfo {
+  width: 528px;
+
+  p {
+    line-height: var(--layout-02);
+    margin: 0;
+  }
+}
+
+.c-cardInfoCategory {
+  font-size: var(--mini-font-size);
+}
+
+.c-cardScore {
+  display: flex;
+  align-items: center;
+  margin-right: var(--layout-02);
+  margin-left: var(--layout-01);
+
+  & > button {
+    font-size: var(--layout-01);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(var(--layout-06) - var(--layout-03));
+    height: 90%;
+    padding: var(--spacing-03);
+    border: 1px solid #f2f2f7;
+    border-radius: var(--spacing-03);
+    background-color: transparent;
+
+    i {
+      font-size: var(--layout-03);
+    }
+  }
+}

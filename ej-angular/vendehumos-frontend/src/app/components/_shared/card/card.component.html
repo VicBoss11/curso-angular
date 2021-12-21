@@ -1,0 +1,23 @@
+<div class="c-card">
+  <div class="c-cardImage">
+    <img [src]="vendehumos.urlImagen" [alt]="vendehumos.descripcion">
+  </div>
+
+  <div class="c-cardInfo">
+    <span>{{ vendehumos.nombre }}</span>
+
+    <p>
+      {{ vendehumos.descripcion | slice:0:60 }}...
+    </p>
+
+    <span class="c-cardInfoCategory">{{ vendehumos.categorias.join(' | ') }}</span>
+  </div>
+
+  <div class="c-cardScore">
+    <button>
+      <i class="uil uil-angle-up"></i>
+
+      <span>{{ vendehumos.votadoPor?.length || 0 }}</span>
+    </button>
+  </div>
+</div>

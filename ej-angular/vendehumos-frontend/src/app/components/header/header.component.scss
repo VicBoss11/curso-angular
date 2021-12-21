@@ -1,0 +1,50 @@
+.c-headerNav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 var(--lateral-spacing);
+  border-bottom: 1px solid #f2f2f7;
+}
+
+.c-headerNavElements,
+.c-headerNavOptions {
+  display: flex;
+  column-gap: var(--spacing-04);
+  margin-right: var(--spacing-04);
+  align-items: center;
+
+  a {
+    cursor: pointer;
+
+    &:not(.c-headerNavOptionsButton) {
+      opacity: .7;
+    }
+
+    &:not(.c-headerNavOptionsSignUpButton):hover {
+      color: #f64900;
+      opacity: 1;
+    }
+  }
+}
+
+.c-headerNavElements {
+  margin-left: var(--spacing-07);
+}
+
+.c-headerNavOptions {
+  margin-left: auto;
+}
+
+.c-headerNavOptionsButton {
+  padding: var(--spacing-02) var(--spacing-04);
+  border-radius: var(--spacing-02);
+}
+
+.c-headerNavOptionsSignUpButton {
+  color: #ffffff;
+  background: #f64900;
+
+  &:hover {
+    background: linear-gradient(227deg,#ff4582,#e12e0d);
+  }
+}

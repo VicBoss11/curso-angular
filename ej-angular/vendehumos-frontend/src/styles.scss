@@ -1,1 +1,128 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
+
+:root {
+  --layout-01: 1rem;
+  --layout-02: 1.5rem;
+  --layout-03: 2rem;
+  --layout-04: 3rem;
+  --layout-05: 4rem;
+  --layout-06: 6rem;
+  --layout-07: 10rem;
+
+  --spacing-01: 0.125rem;
+  --spacing-02: 0.25rem;
+  --spacing-03: 0.5rem;
+  --spacing-04: 0.75rem;
+  --spacing-05: 1rem;
+  --spacing-06: 1.5rem;
+  --spacing-07: 2rem;
+  --spacing-08: 2.5rem;
+  --spacing-09: 3rem;
+
+  // lateral spacing: minimun margin to the web sides
+  --lateral-spacing: var(--layout-04);
+
+  @media(max-width: 768px) {
+    --lateral-spacing: var(--layout-03);
+  }
+
+  @media(max-width: 414px) {
+    --lateral-spacing: var(--layout-02);
+  }
+
+  @media(max-width: 320px) {
+    --lateral-spacing: var(--layout-01);
+  }
+
+  // factor to grow font size in each step of the scale
+  --scale: 1.33;
+
+  --font-family: "Montserrat", sans-serif;
+
+  --mini-weight: 400;
+  --mini-font-size: 12px;
+  --mini-line-height: 22px;
+
+  --small-weight: 400;
+  --small-font-size: 14px;
+  --small-line-height: 26px;
+
+  --body-weight: 400;
+  --body-font-size: 16px;
+  --body-line-height: 30px;
+
+  --titleD-weight: 800;
+  --titleD-font-size: calc(var(--scale) * var(--body-font-size)); // 21.28px
+  --titleD-line-height: 40px;
+
+  --titleC-weight: 800;
+  --titleC-font-size: calc(var(--scale) * var(--titleD-font-size)); // 28.3px
+  --titleC-line-height: 50px;
+
+  --titleB-weight: 800;
+  --titleB-font-size: calc(var(--scale) * var(--titleC-font-size)); // 37.64px
+  --titleB-line-height: 60px;
+
+  --titleA-weight: 800;
+  --titleA-font-size: calc(var(--scale) * var(--titleB-font-size)); // 50px
+  --titleA-line-height: 70px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --scale: 1.14;
+
+    --hero-line-height: 44px;
+    --big-line-height: 38px;
+    --titleA-line-height: 34px;
+    --titleB-line-height: 31px;
+    --titleC-line-height: 28px;
+    --titleD-line-height: 26px;
+    --body-line-height: 28px;
+    --small-line-height: 24px;
+    --mini-line-height: 20px;
+  }
+}
+
+h1 {
+  font-size: var(--titleA-font-size);
+  font-weight: var(--titleA-weight);
+  line-height: var(--titleA-line-height);
+}
+
+h2 {
+  font-size: var(--titleB-font-size);
+  font-weight: var(--titleB-weight);
+  line-height: var(--titleB-line-height);
+}
+
+h3 {
+  font-size: var(--titleC-font-size);
+  font-weight: var(--titleC-weight);
+  line-height: var(--titleC-line-height);
+}
+
+h4 {
+  font-size: var(--titleD-font-size);
+  font-weight: var(--titleD-weight);
+  line-height: var(--titleD-line-height);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-weight);
+  line-height: var(--body-line-height);
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+:is(button, a):enabled {
+  cursor: pointer;
+}

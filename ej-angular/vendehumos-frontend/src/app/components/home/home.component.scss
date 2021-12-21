@@ -1,0 +1,6 @@
+.c-home {
+  display: grid;
+  min-height: 100%;
+  grid-template-rows: auto 1fr auto;
+  grid-auto-columns: 100%;
+}
