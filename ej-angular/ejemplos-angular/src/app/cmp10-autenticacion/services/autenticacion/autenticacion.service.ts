@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +10,11 @@ export class AutenticacionService {
   constructor(private http: HttpClient) {
   }
 
-  login() {
-    const datosLogin = {
-      username: 'cfalco',
-      password: '1234'
-    }
+  login(datosLogin: {email: string, password: string}): Observable<any> {
+    // const datosLogin = {
+    //   username: 'cfalco',
+    //   password: '1234'
+    // }
 
     return this.http.post('http://localhost:3200/login', datosLogin);
   }

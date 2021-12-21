@@ -14,17 +14,49 @@
       "title": "Aumenta la venta de pitos y flautas",
       "content": "Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit.",
       "id": 3,
-      "authorId": 1
-    }
-  ],
-  "authors": [
-    {
-      "id": 1,
-      "name": "Ángel"
+      "userId": 1
     },
     {
-      "id": 1,
-      "name": "Sara"
+      "title": "Aumenta la venta de pitos y flautas",
+      "content": "Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit. Lorem impsum dolor sit amet consectetur adipisicing elit.",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "title": "Ver Vikingos este lunes",
+      "content": "gdfsgdsfgdfgdsfgsdfgsfg",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "title": "gsdgsdfg",
+      "content": "gfdsgsdgf",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "title": "OVNI encontrado en Galicia",
+      "content": "Aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa",
+      "userId": 1,
+      "id": 7
+    }
+  ],
+  "users": [
+    {
+      "nombre": "Charles Falco",
+      "username": "cfalco",
+      "password": "1234",
+      "email": "cfalco@gmail.com",
+      "rol": "USER",
+      "id": 1
+    },
+    {
+      "nombre": "Joel Miller",
+      "username": "jmiller",
+      "password": "1234",
+      "email": "jmiller@gmail.com",
+      "rol": "USER",
+      "id": 2
     }
   ]
 }
