@@ -19,7 +19,17 @@ const getNoticias = (req, res, next) => {
     .then(response => res.json(response.data));
 };
 
+const getNoticia = (req, res, next) => {
+  const { id } = req.params;
+
+  console.log(id);
+
+  axios.get(`http://localhost:3000/news/${id}`)
+    .then(response => res.json(response.data));
+};
+
 module.exports = {
   createNoticia,
-  getNoticias
+  getNoticias,
+  getNoticia
 };
