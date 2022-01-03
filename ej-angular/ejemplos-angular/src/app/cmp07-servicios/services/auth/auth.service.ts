@@ -27,6 +27,13 @@ export class AuthService {
     return payload.id;
   }
 
+  getUserNameFromToken(): string {
+    const token = this.getToken()!;
+    const payload: JwtPayload = jwtDecode(token);
+
+    return payload.nombre;
+  }
+
   getToken(): string | null {
     return localStorage.getItem(this.keyToken);
   }

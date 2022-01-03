@@ -8,6 +8,8 @@ import {
 import { MarcarDirective } from 'src/app/cmp04-directivas/marcar/marcar.directive';
 import { AuthInterceptor } from 'src/app/cmp09-http/interceptors/auth/auth.interceptor';
 import { LogInterceptor } from 'src/app/cmp09-http/interceptors/log/log.interceptor';
+import { RoutingModule } from 'src/app/cmp11-routing/app.routes';
+import { TarjetasCreditoModule } from 'src/app/tarjetas-credito/tarjetas-credito.module';
 import { AppComponent } from './app.component';
 import {
   Cmp01DataBindingComponent
@@ -53,6 +55,15 @@ import {
 } from './cmp08-observables/suscripcion/suscripcion.component';
 import { Cmp09HttpComponent } from './cmp09-http/cmp09-http.component';
 import { Cmp10AutenticacionComponent } from './cmp10-autenticacion/cmp10-autenticacion.component';
+import { Cmp11RoutingComponent } from './cmp11-routing/cmp11-routing.component';
+import { InicioComponent } from './cmp11-routing/inicio/inicio.component';
+import { NuevoUsuarioComponent } from './cmp11-routing/nuevo-usuario/nuevo-usuario.component';
+import { InfoUsuarioComponent } from './cmp11-routing/info-usuario/info-usuario.component';
+import { Error404Component } from './cmp11-routing/error404/error404.component';
+import { Cmp12ModulosYLazyLoadingComponent } from './cmp12-modulos-y-lazy-loading/cmp12-modulos-y-lazy-loading.component';
+import { Cmp13InternacionalizacionComponent } from './cmp13-internacionalizacion/cmp13-internacionalizacion.component';
+import { Cmp14TestingComponent } from './cmp14-testing/cmp14-testing.component';
+import { LogueadoComponent } from './cmp14-testing/logueado/logueado.component';
 
 @NgModule({
   declarations: [
@@ -85,13 +96,24 @@ import { Cmp10AutenticacionComponent } from './cmp10-autenticacion/cmp10-autenti
     FechaActualComponent,
     SuscripcionComponent,
     Cmp09HttpComponent,
-    Cmp10AutenticacionComponent
+    Cmp10AutenticacionComponent,
+    Cmp11RoutingComponent,
+    InicioComponent,
+    NuevoUsuarioComponent,
+    InfoUsuarioComponent,
+    Error404Component,
+    Cmp12ModulosYLazyLoadingComponent,
+    Cmp13InternacionalizacionComponent,
+    Cmp14TestingComponent,
+    LogueadoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RoutingModule,
+    TarjetasCreditoModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LogInterceptor, multi: true },
